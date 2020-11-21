@@ -1,7 +1,7 @@
 import {
   FETCH_EMPLOYEES_SUCCESS,
   FETCH_EMPLOYEES_FAILURE,
-} from "./actionTypes";
+} from "./actionType";
 
 export const init = {
     isLoading: false,

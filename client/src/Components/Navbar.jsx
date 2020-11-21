@@ -1,6 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import {useSelector} from 'react-redux'
 const Navbar = () => {
+    const isAuth = useSelector(state => state.auth.isAuth)
     return (
         <div className="navbar navbar-expand-lg navbar-primary">
             <Link className="navbar-brand" to="/">Employee Records</Link>
@@ -15,6 +17,9 @@ const Navbar = () => {
                     <li className="nav-item">
                         <Link className="nav-link" to="/login">Login</Link>
                     </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/employee">Employee</Link>
+                        </li>
                 </ul>
             </div>
         </div>

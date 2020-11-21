@@ -29,4 +29,16 @@ exports.getAllEmployee = async (req, res) => {
   }
 };
 
+exports.searchEmployee = async (req, res) => {
+    try {
+        const employee = await Employee.findOne({ employee_name: req.body.name });
+        if (!employee) {
+            return res.status(400).send('employee not found')
+        }
+        res.send(employee)
+    } catch (e) {
+        res.status(400).send(e)
+    }
+}
+
 exports.getAllEmployee;

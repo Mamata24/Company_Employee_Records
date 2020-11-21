@@ -1,3 +1,188 @@
 .App {
   text-align: center;
 }
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+  color: white;
+  font-family: "DM Mono", monospace;
+}
+label {
+  color: rgb(205, 218, 211);
+}
+
+.card-list {
+  display: inline-table;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  overflow-x: scroll;
+}
+
+.card-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.card-list::-webkit-scrollbar-thumb {
+  background: #f3cf2d;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card-list::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+.card {
+  display: flex;
+  position: relative;
+  height: 380px;
+  width: 340px;
+  min-width: 250px;
+  padding: 1rem;
+  border-radius: 50px;
+  background-color: #02323c;
+  box-shadow: -1rem 0 3rem #000;
+  flex-direction: column;
+  transition: 0.4s;
+  margin: 30px;
+  clear: both;
+}
+
+section:nth-of-type(4) {
+  margin-left: 350px;
+}
+
+.pagination {
+  margin: 0px 0px 60px 35%;
+}
+.navBar {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(0deg, #3b2d06, #161a2c6b);
+}
+.navBar button {
+  height: 40px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #c26231;
+  color: rgb(228, 226, 218);
+  margin-left: 45%;
+  margin-top: 10px;
+  /* padding: 30px; */
+  border-radius: 30px;
+  font-size: large;
+}
+
+.pagination button {
+  background-color: #c9ddcb;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-size: larger;
+}
+
+.card:hover {
+  /* transform: translateY(-70px); */
+  transform: translateX(70px);
+}
+
+.card-header {
+  margin-bottom: auto;
+}
+
+.card-header p {
+  font-size: 16px;
+  margin: 0 0 1rem;
+  color: #c2c2e0;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  margin: 0.25rem 0 auto;
+  text-decoration: none;
+  color: inherit;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card-header h2:hover {
+  background: linear-gradient(90deg, #b68657, #680e2f);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.card-author {
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.author-avatar {
+  grid-area: auto;
+  align-self: start;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.author-avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  display: block;
+  overflow: hidden;
+  margin: 16px 10px;
+}
+
+.blood {
+  margin-left: 50px;
+  grid-area: auto;
+  box-sizing: border-box;
+}
+
+.blood-prefix {
+  margin-left: 50px;
+  font-style: normal;
+  font-weight: 700;
+  /* color: #524e4e; */
+}
+
+.btn-div {
+  margin: 1rem 0 2rem;
+  padding: 0.5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.btn-div button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: #575785;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+  position: relative;
+}
+
+.btn-div button:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-clip: text;
+  border-color: white;
+}

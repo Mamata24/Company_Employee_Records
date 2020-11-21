@@ -26,6 +26,16 @@ const employeeSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true,
+    },
+    total_salary: {
+        type: Number,
+        required: true,
+        trim:true
+    },
+    joining_date:{
+        type: String,
+        required: true,
+        trim:true
     }
     },
     {
